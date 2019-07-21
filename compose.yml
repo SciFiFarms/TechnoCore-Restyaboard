@@ -2,6 +2,7 @@ version: "3.5"
 
 networks:
   restyaboard:
+  restyaboard-internal:
 
 services:
   ingress:
@@ -44,6 +45,7 @@ services:
         condition: any
     networks:
       - restyaboard
+      - restyaboard-internal
     volumes:
       - restyaboard:/usr/share/nginx/html/media
 
