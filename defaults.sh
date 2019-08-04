@@ -2,4 +2,4 @@
 
 set_service_flag restyaboard 
 
-path_prefix RESTYABOARD restyaboard
+#prefix=

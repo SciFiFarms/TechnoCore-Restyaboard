@@ -22,7 +22,8 @@ services:
         tag: "{{.Name}}"
     deploy:
       labels:
-        - traefik.frontend.rule=Host:restyaboard.${DOMAIN}
+        - traefik.frontend.rule=$RESTYABOARD_ROUTING_LABEL
+        - traefik.frontend.priority=$RESTYABOARD_ROUTING_LABEL_PRIORITY
         - traefik.enable=true
         # You'll need to set applicaiton's port here.
         - traefik.port=SET_ME_PLEASE
